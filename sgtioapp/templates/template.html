@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        
+    </head>
+
+    <body>
+	<script type = "text/javascript" src = "http://code.jquery.com/jqery-1.11.0.min.js">
+	</script>
+	<script type = "text/javascript" src = "search.js">
+	</script>
+	<form id = "form">
+		<label for = "productName" id = "productNameLabel"> Product Name: </br></label>
+			<input type = "text" id = "productName">
+		<input type = "submit" value = "Submit">
+	</form>
+        <ul>
+	     {% for product in products %}
+	          <li>{{product.title}}</li>
+		  <li>{{product.price}}</li>
+		  <li>{{product.description}}</li>
+		  <li>{{product.merchant}}</li>
+		  <li>{{product.url}}</li>
+		  <li>{{product.shipping_cost}}</li>
+	          <li>{{product.currency_code}}</li>
+		  <li>{{product.image_url}}</li>
+	     {% endfor %}
+        </ul>
+	<img src= "{{product.image_url}}" />
+    </body>
+</html>
