@@ -7,22 +7,27 @@
     </head>
 
     <body>
-        <form name = "input" method="get">
+        <form class = "form-{{ layout }}" name = "input" method="get"> 
             Input: <input type = "text" name = "search">
-            <input type = "submit">
-	</form>
-        <ul>
-	     {% for product in products %}
-	          <li>{{product.title}}</li>
-		  <li>{{product.price}}</li>
-		  <li>{{product.description}}</li>
-		  <li>{{product.merchant}}</li>
-		  <li>{{product.url}}</li>
-		  <li>{{product.shipping_cost}}</li>
-	          <li>{{product.currency_code}}</li>
-		  <li>{{product.image_url}}</li>
-	     {% endfor %}
-        </ul>
+            {% csrf_token %}
+                <p class = "form-actions">
+                <input type = "submit" class = "btn btn-primary">
+            </p>
+        </form>
+        <div class = "display">
+            <ul>
+	        {% for product in products %}
+	        <li>{{product.title}}</li>
+		<li>{{product.price}}</li>
+		<li>{{product.description}}</li>
+		<li>{{product.merchant}}</li>
+		<li>{{product.url}}</li>
+		<li>{{product.shipping_cost}}</li>
+	        <li>{{product.currency_code}}</li>
+		<li>{{product.image_url}}</li>
+	        {% endfor %}
+            </ul>
+        <
 	<img src= "{{product.image_url}}" />
     </body>
 </html>

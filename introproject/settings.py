@@ -37,7 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'sgtioapp',
-    'bootstrap_toolkit',
+    'bootstrap3',
 )
 
 MIDDLEWARE_CLASSES = (
