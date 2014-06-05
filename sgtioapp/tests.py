@@ -1,7 +1,10 @@
 from django.test import TestCase
-from stagioapp import views
+from sgtioapp import views
 # Create your tests here.
 
 class ViewTestCase(TestCase):
-	def view_test(self):
-		views.function():
+    def test_connection(self):
+        self.assertEquals(1+1, 2)
+    #def test_null():
+
+    #def test_

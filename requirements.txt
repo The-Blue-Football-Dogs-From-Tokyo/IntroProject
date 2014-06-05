@@ -1,4 +1,4 @@
 requests
 django
 django-bootstrap3
-lettuce
+django-nose
