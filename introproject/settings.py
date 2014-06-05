@@ -38,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'sgtioapp',
     'bootstrap3',
+    'lettuce.django',
 )
 
 MIDDLEWARE_CLASSES = (
