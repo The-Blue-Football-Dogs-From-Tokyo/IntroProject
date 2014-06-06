@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+{% load bootstrap3 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+  
+
+<html>
+    <head> 
+        <style>
+            h1 {text-align:center}
+        </style>
+
+        <div class="container">
+            <div class="jumbotron">
+                <h1>Intro Project</h1>
+            </div>
+        </div>
+
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="row">
+                <h2>SGTio Search</h2>
+                <div id="custom-search-input">
+                    <form name = "input" method = "get">
+                    <div class="input-group col-md-12">
+                            <input type="text" class="  search-query form-control" placeholder="Search" name="search" />
+                        <span class="input-group-btn">
+                            <button class="btn btn-danger" type="button">
+                                <span class=" glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        {% for product in products %}
+            <article class="search-result row"> 
+            <div class="panel panel-default">
+                <div class="col-xs-12 col-sm-12 col-md-2">
+                    <li class="list-group-item"><img src={{ product.image_url }} height="160" width="160"></li> 
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-7">
+                    <h4><div class="panel-heading">{{ product.title }}</div></h4>
+                        <ul class="list-group">
+                            <li class="list-group-item">Price: ${{ product.price }} {{ product.currency_code }}</li>
+                            <li class="list-group-item">Shipping Cost: {{ product.shipping_cost }}</li>
+                            <li class="list-group-item">Merchant: {{ product.merchant }}</li> 
+                            <li class="list-group-item">
+                            URL: <a href = {{ product.url }}>
+                            URL to {{product.title}}</a>.
+                            </li>
+                        </ul>
+                </div>
+            </div>
+            </article>
+        {% endfor %}
+
+    </body>
+</html>
