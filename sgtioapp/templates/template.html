@@ -50,7 +50,10 @@
                             <li class="list-group-item">Price: ${{ product.price }} {{ product.currency_code }}</li>
                             <li class="list-group-item">Shipping Cost: {{ product.shipping_cost }}</li>
                             <li class="list-group-item">Merchant: {{ product.merchant }}</li> 
-                            <li class="list-group-item">URL: {{ product.url }}</li>
+                            <li class="list-group-item">
+                            URL: <a href = {{ product.url }}>
+                            URL to {{product.title}}</a>.
+                            </li>
                         </ul>
                 </div>
             </div>

@@ -1,4 +1,5 @@
 from django.conf.urls import patterns, include, url
+from django.shortcuts import redirect
 from sgtioapp import views
 
 from django.contrib import admin
